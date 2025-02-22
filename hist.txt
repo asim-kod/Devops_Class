@@ -1,0 +1,23 @@
+    1  git --help
+    2  yum install git
+    3  git --version
+    4  ls
+    5  ls -a
+    6  ls .ssh/
+    7  cp /home/ec2-user/id_rsa ./.ssh/
+    8  ls .ssh/
+    9  git clone git@github.com:swapnibrad/apponex_repo_1.git
+   10  chmod 777 .ssh/id_rsa 
+   11  ll .ssh/
+   12  git clone git@github.com:swapnibrad/apponex_repo_1.git
+   13  cp .ssh/id_rsa .
+   14  ls
+   15  git clone git@github.com:swapnibrad/apponex_repo_1.git
+   16  chmod 400 .ssh/id_rsa 
+   17  git clone git@github.com:swapnibrad/apponex_repo_1.git
+   18  ls
+   19  rm -fr id_rsa 
+   20  ls
+   21  cd apponex_repo_1/
+   22  ls
+   23  history >> hist.txt
