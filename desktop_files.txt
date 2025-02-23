@@ -1,0 +1,20 @@
+total 1179584
+-rw-r--r-- 1 Admin-03 197121     137318 Feb 19 05:42 Amazon Redshift Serverless.pdf
+-rwxr-xr-x 1 Admin-03 197121       3983 Jan  7 07:39 Copy of amazingnew (1).pptx.pdf - Shortcut.lnk*
+-rwxr-xr-x 1 Admin-03 197121       3925 Dec  5 07:07 Linux_notes_final (2).pdf - Shortcut.lnk*
+drwxr-xr-x 1 Admin-03 197121          0 Feb 15 07:54 NAYAN/
+-rw-r--r-- 1 Admin-03 197121 1207611276 Jul 21  2024 Video.Guru_20240721_011944486.mp4
+-rw-r--r-- 1 Admin-03 197121         23 Feb 15 11:56 abc.txt
+drwxr-xr-x 1 Admin-03 197121          0 Feb 23 08:33 apponex_repo_1/
+-rw-r--r-- 1 Admin-03 197121      53545 Feb 22 10:20 basic command.pdf
+-rw-r--r-- 1 Admin-03 197121        414 May  6  2023 desktop.ini
+-rw-r--r-- 1 Admin-03 197121         40 Feb  3 07:52 desktop_location.txt
+drwxr-xr-x 1 Admin-03 197121          0 Aug 19  2023 images/
+drwxr-xr-x 1 Admin-03 197121          0 May 23  2023 join ventures/
+-rwxr-xr-x 1 Admin-03 197121       3714 Dec  5 07:07 linux_final.pdf - Shortcut.lnk*
+drwxr-xr-x 1 Admin-03 197121          0 Feb 15 07:53 o/
+-rw-r--r-- 1 Admin-03 197121      29419 Jan 22 18:36 permissionmgmt_qun.pdf
+drwxr-xr-x 1 Admin-03 197121          0 Jan 21 10:50 tom_cat/
+-rw-r--r-- 1 Admin-03 197121       1614 Jan 25 09:51 vpcarcticture.yaml
+-rw-r--r-- 1 Admin-03 197121        716 Feb  3 11:02 vpn configuration.txt
+-rw-r--r-- 1 Admin-03 197121        165 Jan 29  2023 ~$pannel logs.xlsx
