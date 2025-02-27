@@ -1,34 +1,37 @@
 pipeline {
-    agent any
+    agent  { label 'label-1' }
     stages {
-        stage('Build') {
+        stage('git-checkout') {
             steps {
-                println("This is a build stage")
+                sh'sudo apt-get update'
+                sh'sudo apt-get install vim unzip git -y'
+                sh'git clone https://github.com/swapnibrad/student-ui.git'
             }
         }
-        stage('Test') {
+        stage('build-mvn') {
             steps {
-                println("This is a Test stage")
+                sh'sudo apt-get update'
+                sh'sudo apt-get install maven -y'
+                sh'sudo mvn -f ./student-ui clean package'
             }
         }
-        stage('UAT') {
+        stage('tomcat') {
             steps {
-                sh ''' echo "this is a UAT stage"  '''
+                sh ''' 
+                sudo curl -O https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.100/bin/apache-tomcat-9.0.100.zip
+                sudo unzip apache-tomcat-9.0.100.zip
+                sh ./apache-tomcat-9.0.100/bin/catalina.sh start
+                cp ./student-ui/target/studentapp-2.2-SNAPSHOT.war ./apache-tomcat-9.0.100/webapps/studentapp.war
+
+                '''
             }
         }
-        stage('Deploy') {
+        stage('my-sql-server') {
             steps {
                sh '''
                    sudo yum update 
-                    sudo yum install httpd -y
-                    wget https://www.free-css.com/assets/files/free-css-templates/download/page296/browny.zip
-                    unzip browny.zip
-                    systemctl start httpd
-                    systemctl enable httpd
-                    mkdir /var/www/html/laptop
-                    mv /var/lib/jenkins/workspace/pipeline_1/<dir name> /var/www/html
-                    echo "welcome to laptop page: "  >> /var/www/html/laptop/index.html
-                    hostname >> var/www/html/laptop/index.html
+                    sudo apt install mariadb-server -y
+                    systemctl start mariadb
                 '''
             }
         }
