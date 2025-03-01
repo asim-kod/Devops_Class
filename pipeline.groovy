@@ -5,14 +5,14 @@ pipeline {
             steps {
                 sh'sudo apt-get update'
                 sh'sudo apt-get install vim unzip git -y'
-                sh'git clone https://github.com/swapnibrad/student-ui.git'
+                sh'git clone https://github.com/swapnibrad/apponex_repo_1.git'
             }
         }
         stage('build-mvn') {
             steps {
-                sh'sudo apt-get update'
-                sh'sudo apt-get install maven -y'
-                sh'sudo mvn -f ./student-ui clean package'
+                sh'echo "skiping build stage" '
+                // sh'sudo apt-get install maven -y'
+                // sh'sudo mvn -f /home/ubuntu/workspace/project_1/student-ui clean package'
             }
         }
         stage('tomcat') {
@@ -20,8 +20,8 @@ pipeline {
                 sh ''' 
                 sudo curl -O https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.100/bin/apache-tomcat-9.0.100.zip
                 sudo unzip apache-tomcat-9.0.100.zip
-                sh ./apache-tomcat-9.0.100/bin/catalina.sh start
-                cp ./student-ui/target/studentapp-2.2-SNAPSHOT.war ./apache-tomcat-9.0.100/webapps/studentapp.war
+                sh /home/ubuntu/workspace/project_1/apache-tomcat-9.0.100/bin/catalina.sh start
+                cp /home/ubuntu/workspace/project_1/apponex_repo_1/student.war /home/ubuntu/workspace/project_1/apache-tomcat-9.0.100/webapps/student.war
 
                 '''
             }
