@@ -1,10 +1,10 @@
 resource "aws_instance" "instance_1" {
 
-ami = "ami-05b10e08d247fb927"
-iam_instance_profile = "demo-IAM-role"
-instance_type = "t2.micro"
-key_name = "nv_delete"
-subnet_id = aws_subnet.subnet_1.id
+ami = var.ec2_ami_id
+iam_instance_profile = var.ec2_role
+instance_type = var.ec2_instance_type
+key_name = var.ec2_instance_key
+# subnet_id = aws_subnet.subnet_1.id
 tags = {
       Environment = "Test"
       Name        = "fastrack"
@@ -22,7 +22,7 @@ tags = {
   EOF
 }
 
-resource "aws_network_interface_sg_attachment" "sg_attachment" {
-  security_group_id    = aws_security_group.sg_test.id
-  network_interface_id = aws_instance.instance_1.primary_network_interface_id
-}
+# resource "aws_network_interface_sg_attachment" "sg_attachment" {
+#   security_group_id    = aws_security_group.sg_test.id
+#   network_interface_id = aws_instance.instance_1.primary_network_interface_id
+# }
