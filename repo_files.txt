@@ -1,6 +1,0 @@
-total 7
--rw-r--r-- 1 Admin-03 197121   34 Feb 23 08:30 README.md
--rw-r--r-- 1 Admin-03 197121   13 Feb 23 08:30 a.txt
--rw-r--r-- 1 Admin-03 197121 1408 Feb 23 08:33 desktop_files.txt
--rw-r--r-- 1 Admin-03 197121  643 Feb 23 08:30 hist.txt
--rw-r--r-- 1 Admin-03 197121    0 Feb 23 08:39 repo_files.txt
