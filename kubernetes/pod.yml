@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: art-pod
+  labels:
+    app: myapp
+spec:
+  containers:
+    - name: art-nginx
+      image: nginx
+      ports:
+        - containerPort: 80
+ 
+
+#         ## kubectl apply -f <pod file name>.yml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name:  service-1  
+spec:
+  selector:
+    app:  myapp
+  type: LoadBalancer # try without using this first
+  ports:
+  - name:  name-of-the-port
+    protocol: TCP
+    port:  80
+    targetPort:  80
+#  default service is Cluster IP
+# kubectl apply -f <pod file name>.yml  | kubectl describe service <svc name>

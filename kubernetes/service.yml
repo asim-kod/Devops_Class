@@ -1,0 +1,28 @@
+# kind: Service
+# apiVersion: v1
+# metadata:
+#   name:  nginx-service
+# spec:
+#   selector:
+#     app:  myapp
+#   type:  LoadBalancer
+#   ports:
+#   - name:  nginx-port
+#     port:  80
+#     targetPort:  80
+#     protocol: TCP
+
+---------------
+kind: Service
+apiVersion: v1
+metadata:
+  name:  nginx-service-v1
+spec:
+  selector:
+    app: myapp
+  type:  LoadBalancer
+  ports:
+  - name:  nginx-service-port
+    port:  80
+    targetPort:  8080
+    protocol: TCp
