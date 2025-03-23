@@ -1,29 +1,17 @@
-apiVersion: apps/v1
-kind: Deployment
+kind: Service
+apiVersion: v1
 metadata:
-  name: redis-follower
+  name:  redis-leader
   labels:
     app: redis
-    role: follower
+    role: leader
     tier: backend
 spec:
-  replicas: 2
   selector:
-    matchLabels:
-      app: redis
-  template:
-    metadata:
-      labels:
-        app: redis
-        role: follower
-        tier: backend
-    spec:
-      containers:
-      - name: follower
-        image: us-docker.pkg.dev/google-samples/containers/gke/gb-redis-follower:v2
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-        ports:
-        - containerPort: 6379
+    app: redis
+    role: leader
+    tier: backend
+  ports:
+  - name:  rediss-port
+    port:  6379
+    targetPort:  6379
